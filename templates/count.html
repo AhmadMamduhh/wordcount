@@ -1,0 +1,14 @@
+<h1>Full text:</h1>
+<h3>{{ text }} </h3>
+<h3>Total number of words: {{count_letters}} </h3>
+<h1>Word Count:</h1>
+<h3>{% for word, count in sorted_list %}
+    {% if count == 1 %}
+    {{word}}: {{count}} time
+    {% endif %}
+    {% if count != 1 %}
+    {{word}}: {{count}} times 
+    {% endif %}
+ <br/>
+ {% endfor %}
+</h3>
